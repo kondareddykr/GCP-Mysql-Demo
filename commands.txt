@@ -1,0 +1,43 @@
+gcloud config list
+gcloud config set project user-demo-gcp
+gcloud components install app-engine-java
+gcloud app create
+
+# create instance
+gcloud sql instances create users-demo-db --tier=db-f1-micro --region=asia-east1
+# create database
+gcloud sql databases create user_db --instance=users-demo-db
+	
+	https://user-demo-gcp.de.r.appspot.com
+	
+mvn -DskipTests spring-boot:run
+
+
+mvn archetype:generate -Dappengine-version=1.9.59 -Dapplication-id=striped-antler-355412 -Dfilter=com.google.appengine.archetypes:
+
+app.yaml file in appengine folder under src
+
+spring-boot:run
+appengine:deploy
+
+striped-antler-355412:us-central1:gcpmysql
+
+
+koushiksai412
+gmailpasword
+
+
+>>Run Local
+mvn clean
+mvn package
+mvn appengine:run
+
+>> Deploy in Appengine
+mvn package appengine:deploy
+gcloud app browse
+
+
+>>SA
+	demo-user-gcp@striped-antler-355412.iam.gserviceaccount.com
+	
+	
